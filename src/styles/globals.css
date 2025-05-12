@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #0db7ed;
+  --secondary-color: #384d54;
+  --background-color: #f3f4f6;
+  --text-color: #1f2937;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500;
+}
+
+.btn-outline {
+  @apply border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-blue-500;
+}
+
+.btn-success {
+  @apply bg-green-600 text-white hover:bg-green-700 focus:ring-green-500;
+}
+
+.btn-sm {
+  @apply px-3 py-1.5 text-xs;
+}
+
+.btn-disabled {
+  @apply cursor-not-allowed opacity-50;
+}
+
+.card {
+  @apply rounded-lg overflow-hidden;
+}
+
+.card-body {
+  @apply p-6;
+}
+
+.card-title {
+  @apply text-xl font-semibold;
+}
+
+.card-actions {
+  @apply flex items-center justify-end;
+}
+
+.nav-link {
+  @apply px-2 py-1 rounded-md hover:bg-blue-700 transition-colors;
+}
+
+.breadcrumbs {
+  @apply mb-4;
+}
+
+.breadcrumbs ul {
+  @apply flex flex-wrap items-center space-x-2;
+}
+
+.breadcrumbs ul li {
+  @apply flex items-center;
+}
+
+.breadcrumbs ul li:not(:last-child)::after {
+  @apply content-['/'] ml-2 text-gray-400;
+}
+
+.loader {
+  @apply inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-blue-600 border-r-transparent;
+}
+
+.loader-dots {
+  @apply flex space-x-2;
+}
+
+/* Animation delays for the pulse dots */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+/* Prose styles for markdown content */
+.prose {
+  @apply text-gray-800 leading-relaxed;
+}
+
+.prose h1 {
+  @apply text-3xl font-bold mb-6 mt-8;
+}
+
+.prose h2 {
+  @apply text-2xl font-bold mb-4 mt-6;
+}
+
+.prose h3 {
+  @apply text-xl font-bold mb-3 mt-5;
+}
+
+.prose h4 {
+  @apply text-lg font-bold mb-2 mt-4;
+}
+
+.prose p {
+  @apply mb-4;
+}
+
+.prose a {
+  @apply text-blue-600 hover:underline;
+}
+
+.prose ul, .prose ol {
+  @apply mb-4 pl-6;
+}
+
+.prose ul {
+  @apply list-disc;
+}
+
+.prose ol {
+  @apply list-decimal;
+}
+
+.prose li {
+  @apply mb-1;
+}
+
+.prose pre {
+  @apply bg-gray-100 p-4 rounded-md overflow-x-auto mb-4;
+}
+
+.prose code {
+  @apply bg-gray-100 rounded px-1 py-0.5 text-sm font-mono;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic text-gray-700 mb-4;
+}
+
+.prose img {
+  @apply max-w-full h-auto rounded-md my-4;
+}
+
+.prose table {
+  @apply w-full border-collapse mb-4;
+}
+
+.prose table th {
+  @apply bg-gray-100 border border-gray-300 px-4 py-2 text-left font-semibold;
+}
+
+.prose table td {
+  @apply border border-gray-300 px-4 py-2;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1f2937;
+    --text-color: #f3f4f6;
+  }
+  
+  .prose {
+    @apply text-gray-200;
+  }
+  
+  .prose code, .prose pre {
+    @apply bg-gray-800;
+  }
+  
+  .prose blockquote {
+    @apply border-gray-600 text-gray-300;
+  }
+  
+  .prose table th {
+    @apply bg-gray-800 border-gray-600;
+  }
+  
+  .prose table td {
+    @apply border-gray-600;
+  }
+}
