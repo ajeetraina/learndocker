@@ -1,0 +1,50 @@
+---
+title: Introduction to Docker
+description: Learn the basics of Docker and why it's important in modern software development
+order: 1
+duration: 15 min
+---
+
+# Introduction to Docker
+
+Docker is a platform for developing, shipping, and running applications in containers. It enables you to separate your applications from your infrastructure so you can deliver software quickly.
+
+## What is Docker?
+
+Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. Containers allow developers to package an application with all of its dependencies into a standardized unit for software development and deployment.
+
+## Why use Docker?
+
+Here are some key benefits of using Docker:
+
+- **Consistency**: Docker ensures that your application runs the same way in any environment, from development to production.
+- **Isolation**: Containers isolate applications from each other and from the underlying infrastructure.
+- **Portability**: Docker containers can run on any machine that has Docker installed, regardless of the operating system.
+- **Efficiency**: Containers are lightweight and share the host system's kernel, making them more efficient than virtual machines.
+- **Scalability**: Docker's architecture makes it easy to scale applications horizontally.
+
+## Core Concepts
+
+### Images
+
+A Docker image is a lightweight, standalone, and executable package that includes everything needed to run a piece of software, including the code, runtime, libraries, environment variables, and configuration files.
+
+### Containers
+
+A container is a running instance of a Docker image. Containers are isolated from each other and from the host system, but can communicate with each other through defined channels.
+
+### Dockerfile
+
+A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Using `docker build`, users can create an automated build that executes several command-line instructions in succession.
+
+## Docker vs. Virtual Machines
+
+![Docker vs. Virtual Machines](/images/docker-vs-vm.png)
+
+While virtual machines (VMs) virtualize an entire machine down to the hardware level, Docker containers virtualize at the operating system level. This makes Docker containers much more lightweight and faster to start than VMs.
+
+## Conclusion
+
+Docker has revolutionized the way applications are developed, shipped, and deployed. Its containerization approach solves many of the common problems faced in software development, such as the "it works on my machine" issue, dependency conflicts, and complex deployment processes.
+
+In the next module, we'll dive into installing Docker and setting up your first container.
